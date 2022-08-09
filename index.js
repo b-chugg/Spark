@@ -39,9 +39,6 @@ solve.onclick = function(){
     }
 
     var conduitArea = conduitDimensions[conduitTypeVal][conduitSizeVal][wireNumberVal - 1]
-    console.log(conduitArea)
     var wireArea = wireDimensions[wireTypeVal][wireSizeVal]
-    console.log(wireArea)
-    console.log(wireNumberVal)
     content.textContent = (wireArea * wireNumber.value) / conduitArea * 100
 }
