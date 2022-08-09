@@ -1,3 +1,6 @@
+// Data entry
+
+// Conduit type/dimensions [code compliant area filled for 1 wire, 2 wires, 3 wires]
 const conduitDimensions = {
     'EMT': {
         '1/2': [0.161, 0.094, 0.122],
@@ -66,6 +69,8 @@ const conduitDimensions = {
         '6': [13.567, 7.935, 10.239],
     },
 }
+
+// Conduit sizes, drop down write references.
 const conduitSizes = {
     'EMT': ["1/2", "3/4", "1", "1 1/4", "1 1/2", "2", "2 1/2", "3", "3 1/2", "4"],
     'IMC': ["1/2", "3/4", "1", "1 1/4", "1 1/2", "2", "2 1/2", "3", "3 1/2", "4"],
@@ -73,6 +78,8 @@ const conduitSizes = {
     'RNC40': ["1/2", "3/4", "1", "1 1/4", "1 1/2", "2", "2 1/2", "3", "3 1/2", "4", "5", "6"],
     'RNC80': ["1/2", "3/4", "1", "1 1/4", "1 1/2", "2", "2 1/2", "3", "3 1/2", "4", "5", "6"],
 }
+
+// Wire area by type.
 const wireDimensions = {
     'THHW': {
         '14': 0.0139,

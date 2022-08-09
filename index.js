@@ -1,3 +1,4 @@
+//Variables, ID's created
 var conduitType = document.getElementById("conduitType");
 var conduitSize = document.getElementById("conduitSize");
 var wireType = document.getElementById("wireType");
@@ -6,7 +7,7 @@ var wireNumber = document.getElementById("wireNumber");
 var solve = document.getElementById("solve");
 var content = document.getElementById("content");
 
-//Populate sizes based on type
+//Populate drop down menu based on type of conduit.
 function setConduitSizes(){
     var length = conduitSize.options.length
     for (let i = length - 1; i >= 0; i--){
@@ -25,6 +26,7 @@ conduitType.onchange = setConduitSizes
 
 setConduitSizes()
 
+//Solve for what percentage of code compliant space is used in conduit.
 solve.onclick = function(){
     var conduitTypeVal = conduitType.value
     var conduitSizeVal = conduitSize.value
