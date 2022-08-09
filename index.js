@@ -4,7 +4,26 @@ var wireType = document.getElementById("wireType");
 var wireSize = document.getElementById("wireSize");
 var wireNumber = document.getElementById("wireNumber");
 var solve = document.getElementById("solve");
-var content = document.getElementById("content")
+var content = document.getElementById("content");
+
+//Populate sizes based on type
+function setConduitSizes(){
+    var length = conduitSize.options.length
+    for (let i = length - 1; i >= 0; i--){
+        conduitSize.remove(i)
+    }
+    var sizes = conduitSizes[conduitType.value]
+    for (let i = 0; i < sizes.length; i++){
+        var option = document.createElement("option")
+        option.text = sizes[i] + "\""
+        option.value = sizes[i]
+        conduitSize.add(option)
+    }
+}
+
+conduitType.onchange = setConduitSizes
+
+setConduitSizes()
 
 solve.onclick = function(){
     var conduitTypeVal = conduitType.value
@@ -16,6 +35,11 @@ solve.onclick = function(){
     if (wireNumberVal > 3){
         wireNumberVal = 3
     }
-    console.log(dimensions[conduitTypeVal][conduitSizeVal][wireNumberVal - 1])
-    content.textContent = dimensions[conduitTypeVal][conduitSizeVal][wireNumberVal - 1]
+
+    var conduitArea = conduitDimensions[conduitTypeVal][conduitSizeVal][wireNumberVal - 1]
+    console.log(conduitArea)
+    var wireArea = wireDimensions[wireTypeVal][wireSizeVal]
+    console.log(wireArea)
+    console.log(wireNumberVal)
+    content.textContent = (wireArea * wireNumber.value) / conduitArea * 100
 }
