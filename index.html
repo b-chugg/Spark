@@ -5,6 +5,7 @@
     <title>Spark</title>
 </head>
 <body>
+    <script src="dimensions.js"></script>
     <label for="conduitType">What type of conduit?</label>
     <select name="conduitType" id="conduitType">
         <option value="EMT">EMT</option>
@@ -14,19 +15,7 @@
         <option value="RNC80">PVC Sch 80</option>
     </select>
     <label for="conduitSize">What size of conduit?</label>
-    <select name="conduitSize" id="conduitSize">
-        <option value=".5">1/2"</option>
-        <option value=".75">3/4"</option>
-        <option value="1">1"</option>
-        <option value="1.25">1 1/4"</option>
-        <option value="1.5">1 1/2"</option>
-        <option value="2">2"</option>
-        <option value="2.5">2 1/2"</option>
-        <option value="3">3"</option>
-        <option value="4">4"</option>
-        <option value="5">5"</option>
-        <option value="6">6"</option>
-    </select>
+    <select name="conduitSize" id="conduitSize"></select>
     <label for="wireType">What type of wire?</label>
     <select name="wireType" id="wireType">
         <option value="THHW">THHW</option>
@@ -55,21 +44,9 @@
         <option value="500">500 Kcmil</option>
     </select>
     <label for="wireNumber">How many wires?</label>
-    <select name="wireNumber" id="wireNumber">
-        <option value="1">1</option>
-        <option value="2">2</option>
-        <option value="3">3</option>
-        <option value="4">4</option>
-        <option value="5">5</option>
-        <option value="6">6</option>
-        <option value="7">7</option>
-        <option value="8">8</option>
-        <option value="9">9</option>
-        <option value="10">10</option>
-        <option value="11">11</option>
-        <option value="12">12</option>
-        <option value="13">13</option>
-    </select>
-    <button>Solve</button>
+    <input type="number" name="wireNumber" id="wireNumber">
+    <button id ="solve">Solve</button>
+    <div id="content"></div>
+    <script src="index.js"></script>
 </body>
 </html>
