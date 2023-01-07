@@ -1,8 +1,3 @@
-var contentElement = document.getElementById('content');
-var progressBarElement = document.getElementById('progress-bar');
-
-progressBarElement.style.width = contentElement.innerHTML;
-
 //Variables, ID's created
 var conduitType = document.getElementById("conduitType");
 var conduitSize = document.getElementById("conduitSize");
