@@ -1,3 +1,8 @@
+var contentElement = document.getElementById('content');
+var progressBarElement = document.getElementById('progress-bar');
+
+progressBarElement.style.width = contentElement.innerHTML;
+
 //Variables, ID's created
 var conduitType = document.getElementById("conduitType");
 var conduitSize = document.getElementById("conduitSize");
@@ -40,5 +45,6 @@ solve.onclick = function(){
 
     var conduitArea = conduitDimensions[conduitTypeVal][conduitSizeVal][wireNumberVal - 1]
     var wireArea = wireDimensions[wireTypeVal][wireSizeVal]
-    content.textContent = (wireArea * wireNumber.value) / conduitArea * 100
+    var finalCalculation = (wireArea * wireNumber.value) / conduitArea * 100
+    content.textContent = finalCalculation.toFixed(1)
 }
